@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <h1>Problem:1</h1>
+    <form action="/action_page.php" method="get">
+        <label for="fname">a :</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter the value">
+        <label for="lname">b :</label>
+        <input type="text" id="lname" name="lname" placeholder="Enter the value">
+        <select id="all">
+            <option value="Operation" selected>Operation</option>
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Multiplication</option>
+            <option value="/">Division</option>
+        </select>
+       
+        <input type="button" value="Submit"
+        onclick="myTask();">
+        <p id="output"></p>
+      </form>
+      <script type="text/javascript">
+           
+            function myTask()
+            {
+                var result;
+                var value1 = parseFloat(document.getElementById("fname").value);
+                var value2 = parseFloat(document.getElementById("lname").value);
+                
+                var answer = document.getElementById("all").value;
+                alert(answer);
+                //document.getElementById("output").value = eval("value1 answer value2");
+               
+               if(answer=="+")
+               {
+                   result = value1+value2;
+               
+               }
+               else if(answer=="-")
+               {
+                   result = value1-value2;
+               }
+                  
+               else if(answer=="*")
+               {
+                   result = value1*value2;
+                   
+               }
+               else if(answer=="/")
+               {
+                   result = value1/value2;
+                   
+               }
+              else
+              {
+                  result = "no value";
+                  
+              }
+              
+              alert(result);
+                  
+            }
+         
+             
+        </script>
+      
+</body>
+</html>
